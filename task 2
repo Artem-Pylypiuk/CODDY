@@ -1,0 +1,20 @@
+#include<iostream>
+#include<vector>
+
+int time_fire(int c1) {
+	int time = 0, b1 = 0;
+
+	while (c1 > 0) {
+		time += c1 * 2;  
+		b1 += c1;     
+		c1 = b1 / 2;  
+		b1 %= 2;      
+	}
+	return time;
+}
+
+
+int main() {
+	std::cout << time_fire(10) << std::endl;
+	return 0;
+}
